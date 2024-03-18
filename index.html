@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        function cat(){
+            location.href="https://en.wikipedia.org/wiki/Cat";
+        }
+        function dog(){
+            location.href="https://en.wikipedia.org/wiki/Dog";
+        }
+        function rabbit(){
+            location.href="https://en.wikipedia.org/wiki/Rabbit";
+        }
+    </script>
     <style>
         body{
             background: white;
@@ -8,10 +19,12 @@
         }
         .kartinja{
             width: 200px;
-            height: 300px;
+            height: 270px;
             margin: 10px;
-            border: 1px solid gray;
-            border-radius: 20px;
+            border: 1px solid black;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 1s;
         }
         #flexbox{
             display: flex;
@@ -19,10 +32,25 @@
             justify-content: center;
         }
         p{
-            font-size: 40px;
+            font-size: 30px;
         }
         .infoteksts{
             margin: 10px;
+        }
+        .bilde{
+            width: 200px;
+            margin: 0px;
+        }
+        .vaards{
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .kartinja:hover{
+            transform: scale(1.1);
+            transition: all 1s;
+            cursor: pointer;
         }
     </style>
 
@@ -32,43 +60,40 @@
 </head>
 <body>
     <center>
-        <p>Maajdzivnieki</p>
+        <p><b>Maajdzivnieki</b></p>
     </center>
     <div id="flexbox">
-        <div class="kartinja">
-            <img>
+        <div class="kartinja" onclick="cat();">
+            <img src="cat.jpg" alt="" class="bilde">
             <div class="infoteksts">
-                <p>Kakjis</p>
+                <p class="vaards">Kaķis</p>
                 <ul>
-                <li></li>
-                <li></li>
-                <li>Speelejas</li>
+                    <li>Murraa</li>
+                    <li>Guļ</li>
+                    <li>Speelejas</li>
                 </ul>
-                <a href="https://wikipedia.org">Saite uz vikipediju</a>
             </div>
         </div>
-        <div class="kartinja">
-            <img>
+        <div class="kartinja" onclick="dog();">
+            <img src="dog.jpg" alt="" class="bilde">
             <div class="infoteksts">
-                <p>Kakjis</p>
+                <p class="vaards">Suns</p>
                 <ul>
-                <li></li>
-                <li></li>
-                <li>Speelejas</li>
+                    <li>Rej</li>
+                    <li>Skrien</li>
+                    <li>Luncina asti</li>
                 </ul>
-                <a href="https://wikipedia.org">Saite uz vikipediju</a>
             </div>
         </div>
-        <div class="kartinja">
-            <img>
+        <div class="kartinja" onclick="rabbit();">
+            <img src="rabbit.jpg" alt="" class="bilde">
             <div class="infoteksts">
-                <p>Kakjis</p>
+                <p class="vaards">Trusis</p>
                 <ul>
-                <li></li>
-                <li></li>
-                <li>Speelejas</li>
+                    <li>Lec</li>
+                    <li>Pūkains</li>
+                    <li>Grauž</li>
                 </ul>
-                <a href="https://wikipedia.org">Saite uz vikipediju</a>
             </div>
         </div>
     </div>
